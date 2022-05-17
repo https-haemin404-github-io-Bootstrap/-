@@ -10,6 +10,9 @@
 
     <title>Hello, world!</title>
     <style>
+      body{
+        position: relative;
+      }
       #main{
         height: 700px;
       }
@@ -18,12 +21,18 @@
         width: 40%;
       }
       .left{
+        margin-top: 10px;
         float: left;  
-        
+        width: 750px;  
       }
       .right{
         float: right;
         width: 33%;
+      }
+      #sel{
+        overflow: scroll;
+        height: 500px;
+        float: left;
       }
     </style>
     
@@ -326,145 +335,36 @@
 
     <div id="main">
       <div class="container">
-        <!-- 콜랩스 --><!-- 스크롤스파이(?) -->
-        <div class="left">
-          <p>
-            <a class="btn btn-primary" data-bs-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">영화 1</a>
-            <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">영화 2</button>
-            <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample3" aria-expanded="false" aria-controls="multiCollapseExample3">영화 3</button>
-            <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample4" aria-expanded="false" aria-controls="multiCollapseExample4">영화 4</button>
-            <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample5" aria-expanded="false" aria-controls="multiCollapseExample5">영화 5</button>
-            <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample6" aria-expanded="false" aria-controls="multiCollapseExample6">영화 6</button>
-            <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target=".multi-collapse" aria-expanded="false" aria-controls="multiCollapseExample1 multiCollapseExample2">모두 열기/닫기</button>
-          </p>
+        <!-- 스크롤스파이(?) -->
+        <div id="sco" class="left">
           <div class="row">
             <div class="col">
-              <div class="collapse multi-collapse" id="multiCollapseExample1">
-                <div class="card card-body">
-                  <!-- 영화 이미지와 설명1 -->
-                  <div class="card mb-3" style="max-width: 540px;">
-                    <div class="row g-0">
-                      <div class="col-md-4">
-                        <img src="..." class="img-fluid rounded-start" alt="...">
-                      </div>
-                      <div class="col-md-8">
-                        <div class="card-body">
-                          <h5 class="card-title">영화 1</h5>
-                          <p class="card-text">영화 설명1 ~~~~~~</p>
-                          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+              <div id="list-example" class="list-group">
+                <a class="list-group-item list-group-item-action" href="#list-item-1">슈퍼썰매 대모험</a>
+                <a class="list-group-item list-group-item-action" href="#list-item-2">눈요정 마을 대모험</a>
+                <a class="list-group-item list-group-item-action" href="#list-item-3">컴퓨터 왕국 대모험</a>
+                <a class="list-group-item list-group-item-action" href="#list-item-4">공룡섬 대모험</a>
+                <a class="list-group-item list-group-item-action" href="#list-item-5">보물섬 대모험</a>
               </div>
             </div>
-            <div class="col">
-              <div class="collapse multi-collapse" id="multiCollapseExample2">
-                <div class="card card-body">
-                  <!-- 영화 이미지와 설명2 -->
-                  <div class="card mb-3" style="max-width: 540px;">
-                    <div class="row g-0">
-                      <div class="col-md-4">
-                        <img src="KakaoTalk_20211014_023211478.jpg" class="img-fluid rounded-start" alt="...">
-                     </div>
-                     <div class="col-md-8">
-                       <div class="card-body">
-                          <h5 class="card-title">영화2</h5>
-                          <p class="card-text">영화 2 설명~~~~~~~</p>
-                          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="collapse multi-collapse" id="multiCollapseExample3">
-                <div class="card card-body">
-                  <!-- 영화 이미지와 설명3 -->
-                  <div class="card mb-3" style="max-width: 540px;">
-                    <div class="row g-0">
-                      <div class="col-md-4">
-                        <img src="..." class="img-fluid rounded-start" alt="...">
-                      </div>
-                      <div class="col-md-8">
-                        <div class="card-body">
-                          <h5 class="card-title">영화 3</h5>
-                          <p class="card-text">영화 3~~~~~~~~~~~~~~~~~~~~~~</p>
-                          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="collapse multi-collapse" id="multiCollapseExample4">
-                <div class="card card-body">
-                  <!-- 영화 이미지와 설명4 -->
-                  <div class="card mb-3" style="max-width: 540px;">
-                    <div class="row g-0">
-                      <div class="col-md-4">
-                        <img src="..." class="img-fluid rounded-start" alt="...">
-                      </div>
-                      <div class="col-md-8">
-                       <div class="card-body">
-                         <h5 class="card-title">영화 4</h5>
-                         <p class="card-text">영화 4~~~~~~~~~~~~~~~~~~~~~~</p>
-                          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div><div class="col">
-              <div class="collapse multi-collapse" id="multiCollapseExample5">
-                <div class="card card-body">
-                  <!-- 영화 이미지와 설명5 -->
-                  <div class="card mb-3" style="max-width: 540px;">
-                    <div class="row g-0">
-                      <div class="col-md-4">
-                        <img src="..." class="img-fluid rounded-start" alt="...">
-                      </div>
-                      <div class="col-md-8">
-                        <div class="card-body">
-                          <h5 class="card-title">영화 5</h5>
-                          <p class="card-text">영화 5~~~~~~~~~~~~~~~~~~~~~~</p>
-                          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div><div class="col">
-              <div class="collapse multi-collapse" id="multiCollapseExample6">
-                <div class="card card-body">
-                  <!-- 영화 이미지와 설명6 -->
-                  <div class="card mb-3" style="max-width: 540px;">
-                    <div class="row g-0">
-                      <div class="col-md-4">
-                        <img src="..." class="img-fluid rounded-start" alt="...">
-                      </div>
-                      <div class="col-md-8">
-                        <div class="card-body">
-                          <h5 class="card-title">영화 6</h5>
-                          <p class="card-text">영화 6~~~~~~~~~~~~~~~~~~~~~</p>
-                          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+            <div id="sel" class="col">
+              <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-offset="0" class="scrollspy-example" tabindex="0">
+                <div class="wid">
+                  <h4 id="list-item-1">슈퍼썰매 대모험</h4>
+                  <p>개봉년도 : 2013</p>
+                  <h4 id="list-item-2">눈요정 마을 대모험</h4>
+                  <p>개봉년도 : 2014</p>
+                  <h4 id="list-item-3">컴퓨터 왕국 대모험</h4>
+                  <p>개봉년도 : 2015</p>
+                  <h4 id="list-item-4">공룡섬 대모험</h4>
+                  <p>개봉년도 : 2017</p>
+                  <h4 id="list-item-5">보물섬 대모험</h4>
+                  <p>개봉년도 : 2019</p>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-        <!-- 아코디언 -->
+        </div>        <!-- 아코디언 -->
         <div class="right">
             
             <div class="accordion" id="accordionExample">
